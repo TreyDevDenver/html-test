@@ -10,7 +10,7 @@
 @navbar-default-link-hover-color: @brand-primary;
 @navbar-default-link-active-bg: #000;
 @navbar-border-radius: 0;
-@icon-font-path: "/lib/bootstrap/dist/fonts/";
+@icon-font-path: "../lib/bootstrap/dist/fonts/";
 @btn-border-radius-base: 0;
 @btn-border-radius-large: 0;
 @border-radius-base: 0;
@@ -34,7 +34,8 @@
   height: @height;
 }
 .sprite {
-  background-image: url(/img/social_sprite.png);    background-repeat: no-repeat;
+  background-image: url(../img/social_sprite.png);
+  background-repeat: no-repeat;
   display: inline-block;
   margin: 5px;
   &.sprite-facebook {
@@ -120,7 +121,7 @@ header {
 
 div.banner {
   height: 240px;
-  background: url(/img/banner_bg.jpg);
+  background: url(../img/banner_bg.jpg);
   padding-top: 49px;
 
   div.dark-well {

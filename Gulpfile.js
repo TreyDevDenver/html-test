@@ -12,7 +12,7 @@ var gulp           = require("gulp"),
     filter         = require("gulp-filter"),
     glob           = require("glob"),
     browserSync    = require("browser-sync"),
-    util           = require('gulp-util');
+    util           = require("gulp-util");
 
 var config = {
     paths: {
