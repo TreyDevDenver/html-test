@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8" />
-    <title>HTML Test</title>
-    <!-- bower:css -->
-    <!-- endinject -->
-    <link href="css/main.min.css" rel="stylesheet" />
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HTML Test</title>
+  <!-- bower:css -->
+  <!-- endinject -->
+  <link href="css/main.min.css" rel="stylesheet" />
 </head>
 <body>
 
   <header id="top">
     <div class="container head-banner">
       <img src="img/logo.png" alt="LogoIpsum"/>
-      <form class="form-inline">
+      <form class="form-inline hidden-xs">
         <div class="form-group">
           <label class="sr-only" for="searchInput">Search site</label>
           <div class="input-group">
@@ -23,7 +25,7 @@
           </div>
         </div>
       </form>
-      <ul class="list-inline">
+      <ul class="list-inline hidden-xs">
         <li><a href="#"><span class="glyphicon glyphicon-user"></span> Account</a></li>
         <li>|</li>
         <li><a href="#"><span class="glyphicon glyphicon-info-sign"></span> Help</a></li>
@@ -40,6 +42,15 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
+          <form class="pull-right visible-xs">
+            <label class="sr-only" for="searchInput">Search site</label>
+            <div class="input-group">
+              <input type="text" class="form-control input-sm" id="searchInput" placeholder="Search site">
+              <div class="input-group-addon">
+                <a href="#" class="search-icon"><span class="glyphicon glyphicon-search"></span></a>
+              </div>
+            </div>
+          </form>
         </div>
         <div class="collapse navbar-collapse" id="navbar-collapse-1">
           <ul class="nav navbar-nav">
@@ -56,7 +67,7 @@
 
   <div class="banner">
     <div class="row">
-      <div class="col-sm-offset-2 col-sm-8 dark-well">
+      <div class="col-sm-offset-2 col-sm-8 col-xs-12 dark-well">
         <p>Donec faucibus aliquam erat, id<br>pulvinar sem ultricies non</p>
         <a href="#" class="btn btn-primary btn-lg main-cta">Main CTA</a>
       </div>
@@ -140,7 +151,7 @@
     <div class="triangle bottom-nav-triangle"></div>
     <div class="container">
       <div class="row">
-        <div class="col-md-3">
+        <div class="col-sm-3 hidden-xs">
           <ul class="list-unstyled">
             <li><a href="#">Curabitur eget</a></li>
             <li><a href="#">Placerat augue</a></li>
@@ -149,7 +160,7 @@
             <li><a href="#">Sed vestibulum arcu</a></li>
           </ul>
         </div>
-        <div class="col-md-3">
+        <div class="col-sm-3 hidden-xs">
           <ul class="list-unstyled">
             <li><a href="#">Duis facilisis sed diam</a></li>
             <li><a href="#">Fermentum</a></li>
@@ -158,10 +169,11 @@
             <li><a href="#">Tortor pretium ut</a></li>
           </ul>
         </div>
-        <div class="col-md-6 text-right">
+        <div class="col-sm-6 col-xs-12 social-col">
+          <p class="visible-xs"><a href="#">Sitemap <i class="glyphicon glyphicon-plus"></i></a></p>
           <a href="#"><i class="sprite sprite-facebook"></i></a>
           <a href="#"><i class="sprite sprite-twitter"></i></a>
-          <br/>
+          <br class="hidden-xs">
           <a href="#"><i class="sprite sprite-google-plus"></i></a>
           <a href="#"><i class="sprite sprite-pinterest"></i></a>
         </div>
@@ -171,16 +183,25 @@
 
   <footer>
     <div class="container">
-      <div class="row">
-        <div class="col-md-4">
+      <div class="row hidden-xs">
+        <div class="col-sm-5">
           <p class="pull-left">Copyright &copy; 2013 All Rights Reserved</p>
         </div>
-        <div class="col-md-4">
+        <div class="col-sm-2">
           <p class="text-center"><a href="#top">Page top</a></p>
         </div>
-        <div class="col-md-4">
+        <div class="col-sm-5">
           <p class="text-right"><a href="#">Award winning web design</a></p>
         </div>
+      </div>
+    </div>
+    <div class="row hidden-sm hidden-md hidden-lg">
+      <div class="col-xs-12">
+        <p class="text-center">
+          <a href="#top">Page top</a><br>
+          Copyright &copy; 2013 All Rights Reserved<br>
+          <a href="#">Award winning web design</a>
+        </p>
       </div>
     </div>
   </footer>

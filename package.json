@@ -1,13 +1,17 @@
 {
-  "name": "simple-gulp-template",
+  "name": "html-test",
   "version": "1.0.0",
-  "description": "A very simple gulpjs template",
+  "description": "HTML Test",
   "main": "index.html",
   "scripts": {
     "build": "gulp"
   },
-  "author": "Jair Trejo <jair@jairtrejo.mx>",
+  "author": "Trey <TreyDevDenver@gmail.com>",
   "license": "MIT",
+  "repository" : {
+    "type" : "git"
+    , "url" : "https://github.com/TreyDevDenver/html-test"
+  },
   "devDependencies": {
     "bower": "^1.3.12",
     "browser-sync": "^1.6.5",
