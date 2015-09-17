@@ -1,0 +1,250 @@
+@import "bootstrap.less";
+
+// override bootstrap variables
+@brand-primary: #ff3333;
+@navbar-default-bg: #333;
+@navbar-default-color: #999;
+@navbar-default-link-hover-bg: #bbb;
+@navbar-default-link-color: #999;
+@navbar-default-link-active-color: #999;
+@navbar-default-link-hover-color: @brand-primary;
+@navbar-default-link-active-bg: #000;
+@navbar-border-radius: 0;
+@icon-font-path: "/lib/bootstrap/dist/fonts/";
+@btn-border-radius-base: 0;
+@btn-border-radius-large: 0;
+@border-radius-base: 0;
+@input-border-radius: 0;
+@input-border-radius-small: 0;
+@font-size-base: 16px;
+@input-bg: #666;
+@input-color: #999;
+@btn-default-bg: #b4b4b4;
+
+// app variables
+@bottom-nav-height: 240px;
+@bottom-nav-color: #333;
+@footer-height: 40px;
+@footer-color: @brand-primary;
+
+// sprites from https://draeton.github.io/stitches/
+.stitches-sprite(@x: 0, @y: 0, @width: 0, @height: 0) {
+  background-position: @x @y;
+  width: @width;
+  height: @height;
+}
+.sprite {
+  background-image: url(/img/social_sprite.png);    background-repeat: no-repeat;
+  display: inline-block;
+  margin: 5px;
+  &.sprite-facebook {
+    .stitches-sprite(-5px, -5px, 51px, 51px);
+  }
+
+  &.sprite-twitter {
+    .stitches-sprite(-66px, -5px, 51px, 51px);
+  }
+
+  &.sprite-google-plus {
+    .stitches-sprite(-5px, -66px, 51px, 51px);
+  }
+
+  &.sprite-pinterest {
+    .stitches-sprite(-66px, -66px, 51px, 51px);
+  }
+}
+
+// mixin for arrow effect on bottom divs
+// thanks http://cssarrowplease.com/
+.triangle-up(@color) {
+  bottom: 100%;
+  left: 50%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: rgba(51, 51, 51, 0);
+  border-bottom-color: @color;
+  border-width: 20px;
+  margin-left: -20px;
+}
+
+// body
+.navbar {
+  margin-bottom: 1px;
+}
+
+header {
+  color: #999;
+  background-color: #000;
+  font-size: 14px;
+  .head-banner {
+    padding-top: 38px;
+    height: 120px;
+  }
+  a {
+    color: #999;
+  }
+  ul.list-inline {
+    padding-top: 6px;
+  }
+  ul, form {
+    float: right;
+  }
+  .input-group {
+    input.form-control {
+      font-size: 16px;
+      border-top-style: solid;
+      border-left-style: solid;
+      border-right-style: none;
+      border-bottom-style: none;
+    }
+    .input-group-addon {
+      background-color: #666;
+      color: #000;
+      border-top-style: solid;
+      border-left-style: none;
+      border-right-style: none;
+      border-bottom-style: none;
+    }
+    a.search-icon {
+      color: #000;
+    }
+    a.search-icon:hover {
+      color: @brand-primary;
+    }
+  }
+}
+
+div.banner {
+  height: 240px;
+  background: url(/img/banner_bg.jpg);
+  padding-top: 49px;
+
+  div.dark-well {
+    .well();
+    background-color: rgba(0, 0, 0, 0.6);
+    text-align: center;
+    color: #FFF;
+    font-size: 36px;
+    line-height: 43px;
+    border: none;
+    p {
+      margin-bottom: -30px;
+    }
+    a.main-cta {
+      margin-bottom: -70px;
+    }
+  }
+}
+
+div.content-container {
+  >div.row {
+    margin-top: 30px;
+  }
+  div.icon-item {
+    text-align: center;
+    p {
+      padding: 10px 0;
+    }
+    a {
+      padding: 0 5px;
+      background-color: #FFF;
+    }
+    hr {
+      margin-top: -10px;
+    }
+  }
+  blockquote {
+    margin-top: 40px;
+    background-color: #f0f0f0;
+    font-style: italic;
+    font-size: 24px;
+    color: #666;
+    .bq-quote {
+      color: #ccc;
+      margin-top: -15px;
+      font-size: 70px;
+      float: left;
+      padding-right: 20px;
+    }
+  }
+  div.london {
+    h3 {
+      font-size: 24px;
+      color: @brand-primary;
+    }
+    p {
+      padding: 22px 0;
+    }
+    a.london-action {
+      padding: 8px 12px;
+    }
+  }
+}
+
+hr {
+  border-top: 1px solid #ccc;
+}
+hr.page-separator {
+  margin-top: 70px;
+  margin-bottom: 0;
+}
+
+div.bottom-container {
+  font-size: 20px;
+  text-align: center;
+  padding: 32px 0 60px 0;
+  p {
+    padding: 20px;
+  }
+}
+
+div.bottom-nav {
+  position: relative;
+  height: @bottom-nav-height;
+  padding: 40px 0;
+  background-color: #333;
+  color: #FFF;
+  a, a:hover {
+    color: #FFF;
+  }
+  ul.list-unstyled li {
+    padding: 5px 0;
+  }
+  div.text-right a {
+    opacity: 0.6;
+  }
+  div.text-right a:hover {
+    opacity: 1;
+  }
+}
+div.bottom-nav:after {
+  .triangle-up(@bottom-nav-color);
+}
+
+footer {
+  position: relative;
+  color: #FFF;
+  background-color: @footer-color;
+  height: @footer-height;
+  font-size: 14px;
+  padding-top: 10px;
+  a, a:hover {
+    color: #FFF;
+    text-decoration: none;
+  }
+  p.text-right {
+    a {
+      text-decoration: underline;
+    }
+    a:hover {
+      text-decoration: none;
+    }
+  }
+}
+footer:after {
+  .triangle-up(@footer-color);
+}
