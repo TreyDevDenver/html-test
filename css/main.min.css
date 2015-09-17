@@ -6793,6 +6793,14 @@ button.close {
 .navbar {
   margin-bottom: 1px;
 }
+.navbar .navbar-toggle {
+  float: none;
+}
+.navbar .navbar-header form {
+  width: 200px;
+  padding-top: 10px;
+  margin-right: 10px;
+}
 header {
   color: #999;
   background-color: #000;
@@ -6801,6 +6809,12 @@ header {
 header .head-banner {
   padding-top: 38px;
   height: 120px;
+  text-align: center;
+}
+@media (min-width: 768px) {
+  header .head-banner {
+    text-align: left;
+  }
 }
 header a {
   color: #999;
@@ -6834,9 +6848,18 @@ header .input-group a.search-icon:hover {
   color: #ff3333;
 }
 div.banner {
-  height: 240px;
   background: url(../img/banner_bg.jpg);
-  padding-top: 49px;
+  height: 128px;
+  padding-top: 10px;
+}
+@media (min-width: 768px) {
+  div.banner {
+    height: 240px;
+    padding-top: 49px;
+  }
+}
+div.banner .row {
+  margin: 0;
 }
 div.banner div.dark-well {
   min-height: 20px;
@@ -6850,8 +6873,8 @@ div.banner div.dark-well {
   background-color: rgba(0, 0, 0, 0.6);
   text-align: center;
   color: #FFF;
-  font-size: 36px;
-  line-height: 43px;
+  font-size: 20px;
+  line-height: 24px;
   border: none;
 }
 div.banner div.dark-well blockquote {
@@ -6862,7 +6885,19 @@ div.banner div.dark-well p {
   margin-bottom: -30px;
 }
 div.banner div.dark-well a.main-cta {
+  padding: 5px 16px;
   margin-bottom: -70px;
+}
+@media (min-width: 768px) {
+  div.banner div.dark-well a.main-cta {
+    padding: 10px 16px;
+  }
+}
+@media (min-width: 768px) {
+  div.banner div.dark-well {
+    font-size: 36px;
+    line-height: 43px;
+  }
 }
 div.content-container > div.row {
   margin-top: 30px;
@@ -6884,15 +6919,25 @@ div.content-container blockquote {
   margin-top: 40px;
   background-color: #f0f0f0;
   font-style: italic;
-  font-size: 24px;
+  font-size: 16px;
   color: #666;
+}
+@media (min-width: 768px) {
+  div.content-container blockquote {
+    font-size: 24px;
+  }
 }
 div.content-container blockquote .bq-quote {
   color: #ccc;
   margin-top: -15px;
-  font-size: 70px;
+  font-size: 50px;
   float: left;
   padding-right: 20px;
+}
+@media (min-width: 768px) {
+  div.content-container blockquote .bq-quote {
+    font-size: 70px;
+  }
 }
 div.content-container div.london h3 {
   font-size: 24px;
@@ -6921,10 +6966,16 @@ div.bottom-container p {
 }
 div.bottom-nav {
   position: relative;
-  height: 240px;
-  padding: 40px 0;
+  height: 116px;
+  padding: 10px 0;
   background-color: #333;
   color: #FFF;
+}
+@media (min-width: 768px) {
+  div.bottom-nav {
+    height: 240px;
+    padding: 40px 0;
+  }
 }
 div.bottom-nav a,
 div.bottom-nav a:hover {
@@ -6933,11 +6984,19 @@ div.bottom-nav a:hover {
 div.bottom-nav ul.list-unstyled li {
   padding: 5px 0;
 }
-div.bottom-nav div.text-right a {
+div.bottom-nav div.social-col {
+  text-align: center;
+}
+div.bottom-nav div.social-col a {
   opacity: 0.6;
 }
-div.bottom-nav div.text-right a:hover {
+div.bottom-nav div.social-col a:hover {
   opacity: 1;
+}
+@media (min-width: 768px) {
+  div.bottom-nav div.social-col {
+    text-align: right;
+  }
 }
 div.bottom-nav:after {
   bottom: 100%;
@@ -6957,9 +7016,14 @@ footer {
   position: relative;
   color: #FFF;
   background-color: #ff3333;
-  height: 40px;
+  height: 60px;
   font-size: 14px;
-  padding-top: 10px;
+}
+@media (min-width: 768px) {
+  footer {
+    height: 40px;
+    padding-top: 10px;
+  }
 }
 footer a,
 footer a:hover {
@@ -6971,6 +7035,9 @@ footer p.text-right a {
 }
 footer p.text-right a:hover {
   text-decoration: none;
+}
+footer .row.hidden-md.hidden-lg p {
+  margin: 0;
 }
 footer:after {
   bottom: 100%;
